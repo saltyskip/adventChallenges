@@ -32,6 +32,7 @@ with open('input') as fp:
 		else:
 			cities[toParse[2]] = {toParse[0]:int(toParse[4])}
 
-findAllPaths(cities, "AlphaCentauri", [], 0)
+for key in cities.keys():
+	findAllPaths(cities, key, [], 0)
 #print allPaths
-print max(allPaths, key = lambda x:x[1])
+print min(allPaths, key = lambda x:x[1])
